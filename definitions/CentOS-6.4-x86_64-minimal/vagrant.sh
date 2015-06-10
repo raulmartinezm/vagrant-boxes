@@ -10,7 +10,8 @@ chmod 0440 /etc/sudoers.d/vagrant
 
 # Installing vagrant keys
 mkdir -pm 700 /home/vagrant/.ssh
-wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
+#wget --no-check-certificate 'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' -O /home/vagrant/.ssh/authorized_keys
+curl -L -k -o /home/vagrant/.ssh/authorized_keys  'https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub' 
 chmod 0600 /home/vagrant/.ssh/authorized_keys
 chown -R vagrant /home/vagrant/.ssh
 

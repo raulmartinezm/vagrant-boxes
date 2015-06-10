@@ -1,4 +1,4 @@
-yum -y install gcc kernel-devel kernel-headers dkms make bzip2 perl
+yum -y install gcc gcc-c++ kernel-devel  kernel-devel-`uname -r` kernel-headers zlib-devel openssl-devel readline-devel sqlite-devel dkms make bzip2 perl nfs-utils
 KERN_DIR=/usr/src/kernels/`uname -r`
 export KERN_DIR
 
